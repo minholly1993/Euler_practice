@@ -1,0 +1,28 @@
+#From https://projecteuler.net/archives
+#Multiples of 3 and 5
+total=0
+for i in range(1000):
+    if i%3==0 or i%5==0:
+        total+=i
+print(total)
+    
+#Even Fibonacci numbers
+a, b = 1, 2
+total = 2
+while b <= 4000000:
+    c = a + b
+    if c % 2 == 0:
+        total += c
+    a, b = b, c
+print(total)
+    
+#Largest prime factor
+def prime_f(n):
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+    return n
+   
